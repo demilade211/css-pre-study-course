@@ -5,30 +5,56 @@
     <meta charset="UTF-8">
     <title>Sanni's Journal</title>
     <link href="design.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
+
 </head>
 
 <body>
     <header>
         <h1>Sanni's Journal</h1>
-        <h2>So fresh and so clean</h2>
+        <h2 style="color: white;">So fresh and so clean</h2>
     </header>
     <main>
-        <article>
-            <h2>13/05/23: Spatulas</h2>
-            <p><img src="images/spatula.gif" alt="spatulas"></p>
-            <p>
-                Yesterday I went to the store and got some much-needed <a href="https://www.youtube.com/watch?v=2XbCWmY0eqY">spatulas!</a> (What better way to say I love myself than to buy myself a spatula?)
-            </p>
-        </article>
-        <article>
-            <h2>14/05/23: Cookie Monster Cupcakes</h2>
-            <p><img src="images/cookiemonster.jpg" alt="cookie monster"></p>
-            <p>My favorite cartoon character is Cookie Monster, and my favorite dessert is cupcakes, so Cookie Monster cupcakes are the best of both worlds.
-            </p>
-
-            <p>Did you know? Cookie Monster once said, <q>Sometimes me think what is love, and then me think love is what last cookie is for. Me give up the last cookie for you.</q> I wonder if the same applies for cupcakes? (If so, I don't think I can ever love ANYONE!)
-            </p>
-        </article>
+        <div id="add-con">
+            <div class="add-btn">
+                <button id="bu" href="#modal-center" uk-toggle>Add a new note</button>
+            </div>
+            <div class="counter">
+                
+            </div>
+        </div>
+        <div id="modal-center" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+        
+                <p>Write your note</p>
+                <input type="text" id="note">
+                <div class="uk-modal-footer uk-text-right">
+                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                    <button class="uk-button uk-button-primary uk-modal-close" id="button" type="button">Ok</button>
+                </div>
+        
+            </div>
+        </div>
+        <div class="notes">
+            <article>
+                <h2>13/05/23: Spatulas</h2>
+                <p><img src="images/spatula.gif" alt="spatulas"></p>
+                <p>
+                    Yesterday I went to the store and got some much-needed <a href="https://www.youtube.com/watch?v=2XbCWmY0eqY">spatulas!</a> (What better way to say I love myself than to buy myself a spatula?)
+                </p>
+            </article>
+            <article>
+                <h2>14/05/23: Cookie Monster Cupcakes</h2>
+                <p><img src="images/cookiemonster.jpg" alt="cookie monster"></p>
+                <p>My favorite cartoon character is Cookie Monster, and my favorite dessert is cupcakes, so Cookie Monster cupcakes are the best of both worlds.
+                </p>
+    
+                <p>Did you know? Cookie Monster once said, <q>Sometimes me think what is love, and then me think love is what last cookie is for. Me give up the last cookie for you.</q> I wonder if the same applies for cupcakes? (If so, I don't think I can ever love ANYONE!)
+                </p>
+            </article>
+        </div>
     </main>
     <hr>
     <footer>
@@ -42,6 +68,9 @@
     <p>&copy; 2023 Sanni. No Rights Reserved.</p>
     </footer>
 
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit-icons.min.js"></script>
 </body>
 
 </html>
